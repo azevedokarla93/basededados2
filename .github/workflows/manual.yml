@@ -3,9 +3,7 @@
 name: Teste azure mysql server
  
 # Controls when the action will run. Workflow runs when manually triggered using the UI
-
 # or API.
-
 on:
 
   workflow_dispatch:
@@ -70,7 +68,7 @@ jobs:
 
     - name: Send greeting
 
-      run: mysql -u gestor -p Abcd1234 -h ${{ input.name }} < ${{ input.query }}
+      run: mysql -u gestor -p Abcd1234 -h ${{ github.event.inputs.name }} < ${{ github.event.inputs.query }}
 
 # mysql -u username -p < ${{ input.query }} 
  
