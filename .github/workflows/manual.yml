@@ -70,7 +70,7 @@ jobs:
 
     - name: Send greeting
 
-      run: mysql -u gestor -p Abcd1234 -h ${{ input.name }}
+      run: mysql -u gestor -p Abcd1234 -h ${{ input.name }} < ${{ input.query }}
 
-           mysql -u username -p < ${{ input.query }}
+# mysql -u username -p < ${{ input.query }} 
  
